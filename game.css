@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: exmouth;
+    src: url("/makeup/font/exmouth_.ttf");
+}
+
+body {
+    width: 1000px;
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: pink;
+}
+
+
+h1 {
+    font-family: exmouth;
+    font-weight: normal;
+    font-size: 4em;
+}
