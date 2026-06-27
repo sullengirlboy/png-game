@@ -9,6 +9,18 @@
     src: url("/font/exmouth_.ttf");
 }
 
+@font-face {
+    font-family: inter;
+    src: url("/font/inter_regular.ttf");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: inter;
+    src: url("/font/inter_italic.ttf");
+    font-style: italic;
+}
+
 body {
     width: 1000px;
     height: 100vh;
@@ -19,8 +31,8 @@ body {
     align-items: center;
     justify-content: center;
     background-color: pink;
+    font-family: inter;
 }
-
 
 h1 {
     font-family: exmouth;
