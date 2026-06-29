@@ -34,18 +34,17 @@ body {
     font-family: inter;
 }
 
-.parent {
+/* .parent {
     background-color: white;
+    background-image: url("https://foollovers.com/mat/plaid/c15-bg-grid.gif");
     height: 100%;
     width: 100%;
-
-    border-width: 15px;
-    border-style: solid;
-    border-image: url("/img/laceborder.png") 10 fill / 10px / 10px space;
+    padding: 0px 25px;
 
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr 5fr 1fr;
+    gap: 40px;
 }
 
 .parent > * {
@@ -58,10 +57,17 @@ header {
 }
 
 #outfitArea {
-    border: 1px solid gray;
+    background-color: white;
+    border-width: 15px;
+    border-style: solid;
+    border-image: url("/img/laceborder.png") 10 fill / 10px / 10px space;
 }
 
-.div3 {
+#clothesMenu {
+    background-color: white;
+    border-width: 15px;
+    border-style: solid;
+    border-image: url("/img/laceborder.png") 10 fill / 10px / 10px space;
 }
 
 footer {
@@ -72,4 +78,20 @@ h1 {
     font-family: exmouth;
     font-weight: normal;
     font-size: 4em;
+} */
+
+
+.parent {
+    height: 600px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: repeat(1, 1fr);
+    gap: 15px;
+}
+
+#outfitArea, #clothesMenu {
+    border: 1.5px solid black;
+    background-color: white;
+    padding: 15px;
 }
