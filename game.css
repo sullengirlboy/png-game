@@ -30,8 +30,42 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: pink;
+    background-color: rgb(222, 222, 222);
     font-family: inter;
+}
+
+.parent {
+    background-color: white;
+    height: 100%;
+    width: 100%;
+
+    border-width: 15px;
+    border-style: solid;
+    border-image: url("/img/laceborder.png") 10 fill / 10px / 10px space;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 5fr 1fr;
+}
+
+.parent > * {
+    padding: 15px;
+}
+
+header {
+    grid-column: span 2 / span 2;
+    text-align: center;
+}
+
+#outfitArea {
+    border: 1px solid gray;
+}
+
+.div3 {
+}
+
+footer {
+    grid-column: span 2 / span 2;
 }
 
 h1 {
