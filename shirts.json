@@ -1,15 +1,35 @@
 [
     {
-        "name": "Master Metallics Palette",
-        "filePath": "Makeup by Mario"
+        "name": "white/brown striped long sleeve",
+        "filePath": "whitebrownstripedlongsleeve"
     },
     {
-        "name": "Master Metallics Palette",
-        "filePath": "Makeup by Mario"
+        "name": "black with white lace details blouse",
+        "filePath": "blackwhitelacedetblouse"
 
     },
     {
-        "name": "Master Metallics Palette",
-        "filePath": "Makeup by Mario"
+        "name": "lavender sweatshirt",
+        "filePath": "lavendersweatshirt"
+    }, 
+    {
+        "name": "white with floral details dainty top",
+        "filePath": "whitefloraldetdaintytop"
+    },
+    {
+        "name": "blue apple sweater",
+        "filePath": "blueapplesweater"
+    },
+    {
+        "name": "black vest with white pinstripe button up",
+        "filePath": "blackvestwhitepinstripebuttonup"
+    },
+    {
+        "name": "brown radiohead tee",
+        "filePath": "brownradioheadtee"
+    },
+    {
+        "name": "denim blouse",
+        "filePath": "denimblouse"
     }
 ]
