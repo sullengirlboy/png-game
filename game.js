@@ -1,4 +1,5 @@
 var clothesMenuHTML = document.getElementById("clothesMenu");
+var outfitAreaHTML = document.getElementById("outfitArea");
 
 var shirtsMenuHTML = document.getElementById("shirtsMenu");
 var pantsMenuHTML = document.getElementById("pantsMenu");
@@ -18,16 +19,14 @@ populateClothes();
 
 async function populateClothes() {
     for (var i = 0; i < listMapping.length; i++) {
-        var currentListName = listMapping[i];
+        let currentListName = listMapping[i];
         var targetList = clothesOptions[currentListName];
 
         await fetchData(currentListName, targetList);
         targetList.forEach(item => {
             var itemHTML = document.createElement("img");
             itemHTML.src = "/img/" + currentListName + "/" + item.filePath + ".png";
-            itemHTML.addEventListener("click", function(){
-                console.log("item was clicked:", item.name);
-            })
+            itemHTML.addEventListener("click", () => addItem(item, currentListName));
             var itemSectionHTML = document.getElementById(currentListName + "Menu")
             itemSectionHTML.appendChild(itemHTML);
         })
@@ -69,4 +68,12 @@ function showSection(chosenSection) {
         element.style.visibility = "visible";
         element.style.pointerEvents = "auto";
     }, 10);
+}
+
+function addItem(item, currentListName) {
+    console.log("item was clicked:", item.name);
+    var itemHTML = document.createElement("img")
+    itemHTML.src = "/img/" + currentListName + "/" + item.filePath + ".png";
+    // itemHTML.addEventListener("click", () => addItem(item));
+    outfitAreaHTML.appendChild(itemHTML);
 }
