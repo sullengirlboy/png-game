@@ -1,0 +1,35 @@
+[
+    {
+        "name": "greenskirt",
+        "filePath": "greenskirt"
+    },
+    {
+        "name": "brown pants",
+        "filePath": "brownpants"
+
+    },
+    {
+        "name": "white shorts",
+        "filePath": "whiteshorts"
+    }, 
+    {
+        "name": "gray midi skirt",
+        "filePath": "graymidiskirt"
+    },
+    {
+        "name": "jean short shorts",
+        "filePath": "jeanshortshorts"
+    },
+    {
+        "name": "jeans",
+        "filePath": "jeans"
+    },
+    {
+        "name": "brown skirt",
+        "filePath": "brownskirt"
+    },
+    {
+        "name": "pinstripe pants",
+        "filePath": "pinstripepants"
+    }
+]
