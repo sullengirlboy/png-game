@@ -12,6 +12,8 @@ var clothesOptions = {
 };
 var listMapping = ["shirts", "pants"];
 
+var newX = 0, newY = 0, startX = 0, startY = 0;
+
 shirtsBtn.addEventListener("click", () => showSection("shirtsMenu"));
 pantsBtn.addEventListener("click", () => showSection("pantsMenu"));
 
@@ -72,8 +74,35 @@ function showSection(chosenSection) {
 
 function addItem(item, currentListName) {
     console.log("item was clicked:", item.name);
-    var itemHTML = document.createElement("img")
+    var itemHTML = document.createElement("img");
     itemHTML.src = "/img/" + currentListName + "/" + item.filePath + ".png";
-    // itemHTML.addEventListener("click", () => addItem(item));
+    itemHTML.setAttribute("class", "outfitItem");
+    itemHTML.addEventListener("mousedown", mouseDown);
     outfitAreaHTML.appendChild(itemHTML);
+}
+
+function mouseDown(e) {
+    e.preventDefault();
+    var itemHTML = e.currentTarget;
+    startX = e.clientX;
+    startY = e.clientY;
+
+    function mouseMove(e) {
+        newX = startX - e.clientX;
+        newY = startY - e.clientY;
+
+        startX = e.clientX;
+        startY = e.clientY;
+
+        itemHTML.style.top = (itemHTML.offsetTop - newY) + "px";
+        itemHTML.style.left = (itemHTML.offsetLeft - newX) + "px";
+    }
+
+    function mouseUp(e, itemHTML) {
+        document.removeEventListener('mousemove', mouseMove);
+        document.removeEventListener('mousemove', mouseUp);
+    }
+
+    document.addEventListener('mousemove', mouseMove);
+    document.addEventListener('mouseup', mouseUp);
 }

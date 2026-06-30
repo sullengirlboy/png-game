@@ -110,3 +110,13 @@ h1 {
 #clothesMenu > div > img {
     width: 125px;
 }
+
+#outfitArea > .outfitItem {
+    width: 150px;
+    position: absolute;
+    cursor: grab;
+}
+
+#outfitArea > .outfitItem:active {
+    cursor: grabbing;
+}
