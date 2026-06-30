@@ -104,6 +104,9 @@ h1 {
     align-items: center;
     position: absolute;
 
+    left: 15px; 
+    width: calc(100% - 30px); 
+
     transition: opacity 0.4s cubic-bezier(0.33, 1, 0.68, 1), visibility 0.4s cubic-bezier(0.33, 1, 0.68, 1);
 }
 
@@ -112,11 +115,19 @@ h1 {
 }
 
 #outfitArea > .outfitItem {
-    width: 150px;
+    width: 175px;
+    padding: 5px;
     position: absolute;
     cursor: grab;
+    border: 1.5px solid rgba(128, 128, 128, 0);
 }
 
 #outfitArea > .outfitItem:active {
     cursor: grabbing;
+    border: 1.5px solid gray;
+    box-sizing: border-box;
+}
+
+#outfitArea:has(.outfitItem:active) .toolbar {
+
 }
