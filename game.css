@@ -94,8 +94,19 @@ h1 {
     border: 1.5px solid black;
     background-color: white;
     padding: 15px;
+    position: relative;
 }
 
-#clothesMenu > img {
+#clothesMenu > div:not(:first-child) {
+    display: none;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+
+    transition: opacity 0.4s cubic-bezier(0.33, 1, 0.68, 1), visibility 0.4s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+#clothesMenu > div > img {
     width: 125px;
 }
